@@ -1,46 +1,65 @@
-:root{
-    --maincolor:#53DCB2;
-}
-*{
+:root {
+    --maincolor: #53DCB2;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: .3s linear; 
+    transition: 0.3s linear;
     text-decoration: none;
     text-transform: capitalize;
     outline: none;
-}
-html{
+  }
+  
+  html {
     overflow-x: hidden;
     scroll-behavior: smooth;
-}
-.header{
+  }
+  
+  .header {
     padding: 2rem 7%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    box-shadow: 0 .5rem .5rem rgb(0, 0, 0, .1);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
   
-}
-.header #logo img{
+  .header #logo img {
     width: 80px;
-}
-.header .navbar a{
+  }
+  
+  .header .navbar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .header .navbar a {
     font-size: 27px;
-    margin-left: 1.5rem;
     color: var(--maincolor);
-    font-family: "Roboto",sans-serif;
-}
-.header .navbar a:hover{
-   color: black;
-}
-
-
-.main__background{
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .header .navbar a:hover {
+    color: black;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 15px;
+    padding: 2rem 7%;
+  }
+  
+  .main__background {
     background: url(photos/03-day.jpg);
     background-size: cover;
     background-position: center;
@@ -50,72 +69,87 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-   
-}
-.main__text{
+  }
+  
+  .main__text {
     text-align: center;
-}
-.main__text h2{
-    font-size: 27px;
-}
-.main__text h1{
+    display: grid;
+    place-items: center;
     color: black;
+  }
+  
+  .main__text h2 {
     font-size: 27px;
-}
-.main__text h1 span{
+  }
+  
+  .main__text h1 {
+    font-size: 27px;
+  }
+  
+  .main__text h1 span {
     color: var(--maincolor);
-} 
-.book__section{
+  }
+  
+  .book__section {
     padding: 2rem 7%;
     height: 50vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
-}
-.inner__book{
+  }
+  
+  .inner__book {
     width: 100%;
     background: black;
-    display: flex;
-  flex-wrap: wrap;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     padding: 2rem;
-}
-.inner__book input{
+  }
+  
+  .inner__book input {
     padding: 1rem 2rem;
-    margin: .5rem 0;
-
-}
-.book__btn{
+    margin: 0.5rem 0;
+  }
+  
+  .book__btn {
     padding: 1.1rem 2rem;
     background: var(--maincolor);
-
-}
-.book__btn a{
+  }
+  
+  .book__btn a {
     color: white;
     font-size: 27px;
-}
-.main__hotel{
+  }
+  
+  .main__hotel {
     padding: 2rem 7%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 15px;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-.about__us h1{
+  }
+  
+  .about__us h1 {
     color: black;
     font-size: 27px;
     text-align: center;
-    padding: 2rem ;
-}
-.about__us h1 span{
+    padding: 2rem;
+  }
+  
+  .about__us h1 span {
     color: var(--maincolor);
-}
-.about__photo{
+  }
+  
+  .about__photo {
     flex: 1 1 300px;
-
+    display:
 }
+
 .about__photo h2,p{
     text-align: center;
 }
